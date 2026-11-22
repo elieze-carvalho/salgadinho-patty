@@ -2269,3 +2269,61 @@ button,
     object-fit: contain !important;
 }
 
+/* ==========================================
+   AJUSTE COMPACTO DO CABEÇALHO NO CELULAR
+========================================== */
+
+@media (max-width: 860px) {
+    .header {
+        position: relative !important; /* Não trava metade da tela ao rolar */
+        padding: 10px 0 !important;
+    }
+
+    .header .header-content {
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 4px 12px !important;
+    }
+
+    /* Diminui levemente a mascote e o logotipo no celular */
+    .header .logo-mascote {
+        height: 42px !important;
+        width: auto !important;
+    }
+
+    .header .logo-text small {
+        font-size: 0.72rem !important;
+    }
+
+    .header .logo-text strong {
+        font-size: 1.15rem !important;
+    }
+
+    /* Deixa os links do menu compactos em linha horizontal rolável */
+    .header .nav {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        gap: 6px !important;
+        padding-bottom: 4px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .header .nav a:not(.btn-nav) {
+        font-size: 0.85rem !important;
+        padding: 6px 10px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    .header .nav .btn-nav {
+        font-size: 0.85rem !important;
+        padding: 7px 12px !important;
+        margin-left: 2px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+}
+
