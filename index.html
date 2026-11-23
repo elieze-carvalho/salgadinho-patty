@@ -10,45 +10,90 @@
     <link href="https://googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=10">
     <style>
-    @media (max-width: 860px) {
-        header.header {
-            position: relative !important;
-            padding: 8px 0 !important;
+        /* Ajuste compacto do menu no celular */
+        @media (max-width: 860px) {
+            header.header {
+                position: relative !important;
+                padding: 8px 0 !important;
+            }
+            header.header .header-content {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 8px !important;
+                padding: 4px 10px !important;
+            }
+            header.header .logo-mascote {
+                height: 40px !important;
+                width: auto !important;
+            }
+            header.header nav.nav {
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                justify-content: flex-start !important;
+                gap: 6px !important;
+                padding-bottom: 4px !important;
+            }
+            header.header nav.nav a,
+            header.header nav.nav button {
+                font-size: 0.84rem !important;
+                padding: 6px 10px !important;
+                white-space: nowrap !important;
+                flex-shrink: 0 !important;
+                margin: 0 !important;
+            }
         }
-        header.header .header-content {
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 8px !important;
-            padding: 4px 10px !important;
-        }
-        header.header .logo-mascote {
-            height: 40px !important;
-            width: auto !important;
-        }
-        header.header nav.nav {
-            width: 100% !important;
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: nowrap !important;
-            overflow-x: auto !important;
-            justify-content: flex-start !important;
-            gap: 6px !important;
-            padding-bottom: 4px !important;
-        }
-        header.header nav.nav a,
-        header.header nav.nav button {
-            font-size: 0.84rem !important;
-            padding: 6px 10px !important;
-            white-space: nowrap !important;
-            flex-shrink: 0 !important;
-            margin: 0 !important;
-        }
-    }
-</style>
 
-
+        /* Carrossel ocupando a tela inteira no desktop e crescendo tudo proporcionalmente */
+        @media (min-width: 861px) {
+            .patty-carousel {
+                height: calc(100vh - 76px) !important;
+                min-height: 620px !important;
+            }
+            .carousel-slide {
+                height: 100% !important;
+                min-height: 620px !important;
+                padding: 40px 0 60px !important;
+            }
+            .carousel-tag {
+                font-size: 0.9rem !important;
+                padding: 7px 18px !important;
+            }
+            .carousel-text h2 {
+                font-size: 2.65rem !important;
+                margin-bottom: 18px !important;
+            }
+            .carousel-text p {
+                font-size: 1.15rem !important;
+                margin-bottom: 28px !important;
+            }
+            .carousel-actions .btn {
+                font-size: 1.08rem !important;
+                padding: 14px 28px !important;
+            }
+            .mascote-center img {
+                height: 360px !important;
+            }
+            .mascote-side img {
+                height: 300px !important;
+            }
+            .slide-photo-frame {
+                max-height: 380px !important;
+                max-width: 520px !important;
+            }
+            .slide-partners-badges span,
+            .partner-pill-box {
+                max-width: 380px !important;
+                padding: 16px 24px !important;
+                font-size: 1.3rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
+
 
                 <!-- Cabeçalho -->
     <header class="header">
