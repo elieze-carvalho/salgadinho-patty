@@ -487,78 +487,102 @@
 
 
         
-               <!-- Seção de Contato / Orçamento -->
+                <!-- Seção de Contato / Cotação Formal por E-mail -->
     <section id="contato" class="section section-contact">
         <div class="container">
             <div class="contact-header">
-                <span class="section-label">Atendimento Direto</span>
-                <h2>Fale com nossa equipe comercial</h2>
-                <p>Selecione a frente de atendimento desejada abaixo para iniciar sua conversa direto no WhatsApp.</p>
+                <span class="section-label">Cotação &amp; Atendimento Formal</span>
+                <h2>Envie sua solicitação por e-mail</h2>
+                <p>Ideal para redes varejistas, distribuidores e empresas que desejam receber proposta formalizada ou enviar especificações técnicas.</p>
             </div>
 
             <div class="contact-box-wrapper">
                 <div class="sector-selector-grid">
-                    <div class="sector-card sector-patty active" data-value="revenda">
+                    <div class="sector-card sector-patty active" data-value="Revenda e Distribuição Salgadinho Patty">
                         <div class="sector-top">
                             <span class="sector-badge badge-green">Marca Própria</span>
-                            <span class="sector-check">&#10003; Selecionado</span>
+                            <span class="sector-check">✓ Selecionado</span>
                         </div>
                         <h3>Revenda e Distribuição Patty</h3>
                         <p>Para mercados, padarias, conveniências, farmácias e distribuidores.</p>
                     </div>
 
-                    <div class="sector-card sector-b2b" data-value="terceirizacao">
+                    <div class="sector-card sector-b2b" data-value="Terceirização Industrial (Private Label)">
                         <div class="sector-top">
                             <span class="sector-badge badge-red">Indústria B2B</span>
-                            <span class="sector-check">&#10003; Selecionado</span>
+                            <span class="sector-check">✓ Selecionado</span>
                         </div>
                         <h3>Terceirização (Marca Própria)</h3>
                         <p>Para empresas e redes que desejam fabricar sua própria marca.</p>
                     </div>
                 </div>
 
-                <form id="whatsappForm" class="contact-form-modern">
+                <form id="emailForm" class="contact-form-modern" action="https://formsubmit.co" method="POST">
+                    <input type="hidden" name="_subject" id="emailSubject" value="Nova Cotação via Site - Revenda Salgadinho Patty">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+
                     <div class="form-row-2">
                         <div class="form-group">
                             <label for="nome">Seu Nome / Empresa <span>*</span></label>
-                            <input type="text" id="nome" required placeholder="Ex: João Silva - Mercado Central">
+                            <input type="text" id="nome" name="Nome_ou_Empresa" required placeholder="Ex: João Silva - Mercado Central">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailCliente">Seu E-mail para Retorno <span>*</span></label>
+                            <input type="email" id="emailCliente" name="Email_Cliente" required placeholder="compras@suaempresa.com.br" style="width:100%; padding:13px 16px; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.95rem; background:#f8fafc;">
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="telefoneCliente">Telefone / WhatsApp <span>*</span></label>
+                            <input type="tel" id="telefoneCliente" name="Telefone_WhatsApp" required placeholder="(51) 99999-9999" style="width:100%; padding:13px 16px; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.95rem; background:#f8fafc;">
                         </div>
 
                         <div class="form-group">
                             <label for="cidade">Cidade / Estado <span>*</span></label>
-                            <input type="text" id="cidade" required placeholder="Ex: Canoas - RS">
+                            <input type="text" id="cidade" name="Cidade_Estado" required placeholder="Ex: Canoas - RS">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="interesse">Qual é o seu objetivo? <span>*</span></label>
                         <div class="select-wrapper">
-                            <select id="interesse" required>
-                                <option value="revenda">Quero revender/distribuir Salgadinho Patty</option>
-                                <option value="terceirizacao">Quero produzir minha própria marca (terceirização)</option>
+                            <select id="interesse" name="Frente_Atendimento" required>
+                                <option value="Revenda e Distribuição Salgadinho Patty">Quero revender/distribuir Salgadinho Patty</option>
+                                <option value="Terceirização Industrial (Private Label)">Quero produzir minha própria marca (terceirização)</option>
                             </select>
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label for="mensagemEmail">Detalhes da Solicitação (opcional)</label>
+                        <textarea id="mensagemEmail" name="Detalhes_Solicitacao" rows="3" placeholder="Informe estimativa de volume, sabores de interesse ou dúvidas sobre sua bobina..." style="width:100%; padding:13px 16px; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.95rem; font-family:inherit; background:#f8fafc; resize:vertical;"></textarea>
+                    </div>
+
                     <button type="submit" id="btnSubmitWa" class="btn-submit-wa theme-patty">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
-                        </svg>
-                        <span>Iniciar Conversa no WhatsApp</span>
+                        <span>✉️ Enviar Solicitação por E-mail</span>
                     </button>
+
+                    <p style="text-align:center; font-size:0.84rem; color:#64748b; margin-top:12px;">
+                        Ou envie diretamente pelo seu aplicativo de e-mail para: 
+                        <a href="mailto:eliezecarvalho10@://gmail.com" style="color:#065f46; font-weight:700; text-decoration:underline;">eliezecarvalho10@gmail.com</a>
+                    </p>
                 </form>
             </div>
         </div>
     </section>
 
-            <script>
+    <script>
         (function() {
             const cards = document.querySelectorAll('#contato .sector-card');
             const select = document.getElementById('interesse');
+            const subjectInput = document.getElementById('emailSubject');
             const btnSubmit = document.getElementById('btnSubmitWa');
-            const form = document.getElementById('whatsappForm');
 
-            function atualizarSetor(valor) {
+            function atualizarSetorEmail(valor) {
                 cards.forEach(card => {
                     card.classList.toggle('active', card.getAttribute('data-value') === valor);
                 });
@@ -567,66 +591,36 @@
                     select.value = valor;
                 }
 
+                const isB2B = valor.includes('Terceirização');
+                if (subjectInput) {
+                    subjectInput.value = isB2B
+                        ? 'Nova Cotação via Site - Terceirização Industrial (Private Label)'
+                        : 'Nova Cotação via Site - Revenda Salgadinho Patty';
+                }
+
                 if (btnSubmit) {
                     btnSubmit.classList.remove('theme-patty', 'theme-b2b');
-                    btnSubmit.classList.add(valor === 'terceirizacao' ? 'theme-b2b' : 'theme-patty');
+                    btnSubmit.classList.add(isB2B ? 'theme-b2b' : 'theme-patty');
                 }
             }
 
             cards.forEach(card => {
                 card.addEventListener('click', function() {
                     const valor = this.getAttribute('data-value');
-                    if (valor) atualizarSetor(valor);
+                    if (valor) atualizarSetorEmail(valor);
                 });
             });
 
             if (select) {
                 select.addEventListener('change', function() {
-                    atualizarSetor(this.value);
+                    atualizarSetorEmail(this.value);
                 });
-            }
-
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-
-                    const nome = document.getElementById('nome').value.trim();
-                    const cidade = document.getElementById('cidade').value.trim();
-                    const objetivoValor = select ? select.value : 'revenda';
-
-                    const objetivoTexto = objetivoValor === 'terceirizacao'
-                        ? 'Terceirização (Produzir minha própria marca)'
-                        : 'Revender / Distribuir Salgadinho Patty';
-
-                    const mensagem =
-                        'Olá! Preenchi o formulário no site:\n\n' +
-                        '*Nome / Empresa:* ' + nome + '\n' +
-                        '*Cidade / Estado:* ' + cidade + '\n' +
-                        '*Objetivo:* ' + objetivoTexto;
-
-                    const base = ['https://', 'api.', 'whatsapp.', 'com/send?phone='].join('');
-                    const destino = base + '5551996033749&text=' + encodeURIComponent(mensagem);
-                    
-                    const linkTemp = document.createElement('a');
-                    linkTemp.href = destino;
-                    linkTemp.target = '_blank';
-                    linkTemp.rel = 'noopener noreferrer';
-                    document.body.appendChild(linkTemp);
-                    linkTemp.click();
-                    document.body.removeChild(linkTemp);
-                }, true);
             }
         })();
     </script>
 
 
-
-
-
-
-
-    <!-- Rodapé -->
+          <!-- Rodapé -->
     <footer class="footer">
         <div class="container footer-content">
             <div>
