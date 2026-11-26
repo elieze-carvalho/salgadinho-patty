@@ -1,35 +1,13 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    const FONE = '5551996033749';
-
-    function abrirChat(mensagem) {
-        const dominio = 'wa.me';
-        const destino = 'https://' + dominio + '/send?phone=' + FONE + '&text=' + encodeURIComponent(mensagem);
+   function abrirChat(mensagem) {
+        const prefixo = ['https://', 'api.', 'whatsapp.', 'com/send?phone='].join('');
+        const destino = prefixo + FONE + '&text=' + encodeURIComponent(mensagem);
         window.open(destino, '_blank', 'noopener,noreferrer');
     }
 
-    // Intercepta qualquer clique em botões/links de WhatsApp no site inteiro
-    document.addEventListener('click', (e) => {
-        const alvo = e.target.closest('a, button');
-        if (!alvo) return;
 
-        const href = alvo.getAttribute('href') || '';
-        const isTrigger = alvo.classList.contains('whatsapp-trigger') || alvo.classList.contains('btn-table-wa') || alvo.classList.contains('floating-wa');
 
-        if (isTrigger || href.includes('whatsapp.com') || href.includes('wa.me')) {
-            e.preventDefault();
-            const frente = alvo.getAttribute('data-frente') || '';
-            let msg = 'Olá! Vim pelo site da Salgadinho Patty e gostaria de mais informações comerciais.';
-
-            if (frente === 'terceirizacao' || window.location.pathname.includes('terceirizacao')) {
-                msg = 'Olá! Vim pelo site e gostaria de solicitar um orçamento para produzir salgadinhos com a minha própria marca (terceirização).';
-            } else if (frente === 'revenda' || window.location.pathname.includes('patty')) {
-                msg = 'Olá! Vim pelo site e tenho interesse em revender/distribuir o Salgadinho Patty no meu estabelecimento.';
-            }
-
-            abrirChat(msg);
-        }
-    });
+   
 
     // Menu mobile
     const menuToggle = document.getElementById('menuToggle');
@@ -61,54 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Pop-up de Intenção de Saída (Exit-Intent)
-    let popupCriado = false;
-    let popupExibido = false;
-    let navegou = false;
-    let pronto = false;
-
-    setTimeout(() => { pronto = true; }, 3000);
-
-    document.addEventListener('mousemove', (e) => {
-        if (e.clientY > 120) navegou = true;
-    });
-
-    document.documentElement.addEventListener('mouseleave', (e) => {
-        if (!pronto || !navegou || popupExibido || e.clientY > 20) return;
-        popupExibido = true;
-
-        if (!popupCriado) {
-            popupCriado = true;
-            const div = document.createElement('div');
-            div.id = 'exitPopupAuto';
-            div.style.cssText = 'display:flex; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(15,23,42,0.75); z-index:999999; align-items:center; justify-content:center; padding:20px;';
-            div.innerHTML = `
-                <div style="background:#ffffff; max-width:460px; width:100%; padding:36px 28px; border-radius:16px; text-align:center; position:relative; box-shadow:0 25px 50px rgba(0,0,0,0.3); border-top:6px solid #15803d; font-family:'Segoe UI',sans-serif;">
-                    <button type="button" id="fecharExitAuto" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:28px; color:#94a3b8; cursor:pointer;">&times;</button>
-                    <span style="display:inline-block; background:#fef2f2; color:#b91c1c; font-size:12px; font-weight:800; text-transform:uppercase; padding:5px 14px; border-radius:50px; margin-bottom:12px;">Espere um instante!</span>
-                    <h3 style="font-size:22px; color:#0f172a; margin-bottom:10px; line-height:1.25;">Ainda não encontrou o que procurava?</h3>
-                    <p style="font-size:15px; color:#334155; margin-bottom:24px;">Fale direto com nossa equipe comercial no WhatsApp e receba a <strong>tabela de revenda</strong> ou um <strong>orçamento de terceirização</strong> sem compromisso.</p>
-                    <div style="display:flex; flex-direction:column; gap:10px;">
-                        <button type="button" id="btnPopupWhats" style="display:block; width:100%; background:#25d366; color:#ffffff; font-weight:700; padding:14px 20px; border:none; border-radius:8px; cursor:pointer; font-size:16px;">
-                            Receber Cotação no WhatsApp
-                        </button>
-                        <button type="button" id="continuarExitAuto" style="background:none; border:none; color:#64748b; font-size:14px; font-weight:600; cursor:pointer; padding:8px; text-decoration:underline;">
-                            Continuar navegando no site
-                        </button>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(div);
-
-            const fechar = () => { div.style.display = 'none'; };
-            document.getElementById('fecharExitAuto').onclick = fechar;
-            document.getElementById('continuarExitAuto').onclick = fechar;
-            document.getElementById('btnPopupWhats').onclick = () => {
-                abrirChat('Olá! Estava no site da Patty e gostaria de receber uma cotação.');
-            };
-            div.onclick = (ev) => { if (ev.target === div) fechar(); };
-        }
-    });
+    
     // ==========================================
     // SELETOR INTERATIVO DE SETOR (CONTATO)
     // ==========================================
