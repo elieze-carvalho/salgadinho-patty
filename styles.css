@@ -3155,17 +3155,17 @@ header.header .btn-nav {
 }
 
 /* ==========================================
-   IMPACTO MÁXIMO NAS IMAGENS DE TOPO (PATTY E TERCEIRIZAÇÃO)
+   DEIXA AS IMAGENS DE TOPO (PATTY E TERCEIRIZAÇÃO) COM O MESMO PORTE DA HOME
 ========================================== */
 .page-hero .container {
-    max-width: 1400px !important;
+    max-width: 1360px !important;
 }
 
 @media (min-width: 861px) {
     .page-hero-grid {
         display: grid !important;
-        grid-template-columns: 0.9fr 1.35fr !important;
-        gap: 40px !important;
+        grid-template-columns: 1fr 1.15fr !important;
+        gap: 48px !important;
         align-items: center !important;
     }
 }
@@ -3175,40 +3175,37 @@ header.header .btn-nav {
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    margin: 0 !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
     padding: 0 !important;
 }
 
 .page-hero-img {
     display: block !important;
     width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 440px !important;
-    max-height: none !important;
+    height: auto !important;
+    max-height: 640px !important;
     object-fit: contain !important;
-    background: transparent !important;
-    border-radius: 18px !important;
-    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.38) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.42) !important;
 }
 
 @media (max-width: 860px) {
     .page-hero-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 24px !important;
+        gap: 28px !important;
     }
 
     .page-hero-media {
         width: 100% !important;
+        max-width: 100% !important;
     }
 
     .page-hero-img {
         width: 100% !important;
-        height: 340px !important;
+        height: auto !important;
+        max-height: 540px !important;
         object-fit: contain !important;
     }
 }
