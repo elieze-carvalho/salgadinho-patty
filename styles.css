@@ -3155,39 +3155,42 @@ header.header .btn-nav {
 }
 
 /* ==========================================
-   DEIXA AS IMAGENS DE TOPO (PATTY E TERCEIRIZAÇÃO) DO MESMO TAMANHO DOS CARDS DA HOME
+   IMPACTO MÁXIMO NAS IMAGENS DE TOPO (PATTY E TERCEIRIZAÇÃO)
 ========================================== */
-
 .page-hero .container {
-    max-width: 1380px !important;
+    max-width: 1400px !important;
 }
 
 @media (min-width: 861px) {
     .page-hero-grid {
         display: grid !important;
-        grid-template-columns: 1fr 1.25fr !important;
-        gap: 44px !important;
+        grid-template-columns: 0.9fr 1.35fr !important;
+        gap: 40px !important;
         align-items: center !important;
     }
 }
 
 .page-hero-media {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .page-hero-img {
+    display: block !important;
     width: 100% !important;
+    min-width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
+    height: 440px !important;
     max-height: none !important;
     object-fit: contain !important;
+    background: transparent !important;
     border-radius: 18px !important;
     box-shadow: 0 22px 48px rgba(0, 0, 0, 0.38) !important;
 }
@@ -3199,10 +3202,13 @@ header.header .btn-nav {
         gap: 24px !important;
     }
 
-    .page-hero-media,
+    .page-hero-media {
+        width: 100% !important;
+    }
+
     .page-hero-img {
         width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
+        height: 340px !important;
+        object-fit: contain !important;
     }
 }
