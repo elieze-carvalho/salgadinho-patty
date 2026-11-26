@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parceiros &amp; Marcas Atendidas | Indústria de Alimentos Patty</title>
-    <link rel="preconnect" href="https://googleapis.com">
+      <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Baloo+2:wght@800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css?v=50">
+
     <style>
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -303,13 +305,18 @@
     <!-- Cabeçalho Limpo e Padronizado -->
     <header class="header">
         <div class="container header-content">
-            <a href="index.html" class="logo">
-                <img src="imagens/mascote-patty (1).png" alt="Mascote Salgadinho Patty" class="logo-mascote">
-                <div class="logo-text" style="font-family: 'Baloo 2', 'Arial Rounded MT Bold', sans-serif;">
-                    <small style="font-family: inherit; font-weight: 800; letter-spacing: 0.5px;">SALGADINHO</small>
-                    <strong style="font-family: inherit; font-weight: 800; letter-spacing: 0.5px;">PATTY</strong>
+                       <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                <img src="imagens/mascote-cabecalho.png" alt="Mascote Salgadinho Patty" class="logo-mascote">
+                <div class="logo-text" style="display: flex; flex-direction: column; justify-content: center; line-height: 1;">
+                    <small style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 2.2px; color: #15803d; text-transform: uppercase; margin-bottom: 1px;">
+                        SALGADINHO
+                    </small>
+                    <strong style="font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1.75rem; letter-spacing: -0.3px; background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 1px rgba(0,0,0,0.12));">
+                        PATTY
+                    </strong>
                 </div>
             </a>
+
 
             <nav class="nav" id="navMenu">
                 <a href="index.html">Início</a>
@@ -342,7 +349,7 @@
                 <span>Proteção integral de marcas e bobinas</span>
             </div>
             <div class="trust-item">
-                <strong>Padrão de Extrusão</strong>
+                <strong>Padrão Industrial</strong>
                 <span>Textura, peso e tempero uniformes por lote</span>
             </div>
             <div class="trust-item">
@@ -443,7 +450,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+       <footer class="footer">
         <div class="container footer-content">
             <div>
                 <strong>Indústria de Alimentos Patty</strong>
@@ -453,9 +460,382 @@
         </div>
     </footer>
 
-    <button type="button" class="floating-wa" onclick="(function(){ const base = ['https://', 'api.', 'whatsapp.', 'com/send?phone='].join(''); const a = document.createElement('a'); a.href = base + '5551996033749&text=' + encodeURIComponent('Olá! Acessei a página de Parceiros do site e gostaria de falar com a equipe comercial.'); a.target = '_blank'; a.rel = 'noopener noreferrer'; document.body.appendChild(a); a.click(); document.body.removeChild(a); })()">
-        WhatsApp
+    <!-- ==========================================
+         ASSISTENTE VIRTUAL COMERCIAL PATTY
+    ========================================== -->
+    <style>
+        .patty-ai-launcher {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: linear-gradient(135deg, #064e3b 0%, #15803d 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 999px;
+            padding: 13px 20px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(6, 78, 59, 0.38);
+            z-index: 9998;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .patty-ai-launcher:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(6, 78, 59, 0.48);
+        }
+        .patty-ai-dot {
+            width: 10px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.3);
+        }
+        .patty-ai-box {
+            position: fixed;
+            bottom: 84px;
+            right: 22px;
+            width: 345px;
+            max-width: calc(100vw - 32px);
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            z-index: 9999;
+        }
+        .patty-ai-box.open {
+            display: flex;
+        }
+        .patty-ai-header {
+            background: linear-gradient(135deg, #042f2e 0%, #064e3b 100%);
+            color: #ffffff;
+            padding: 15px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .patty-ai-header strong {
+            display: block;
+            font-size: 0.98rem;
+        }
+        .patty-ai-header small {
+            font-size: 0.78rem;
+            color: #a7f3d0;
+        }
+        .patty-ai-close {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #ffffff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .patty-ai-messages {
+            padding: 16px;
+            max-height: 310px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #f8fafc;
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+        .ai-msg-bot {
+            background: #ffffff;
+            color: #1e293b;
+            padding: 11px 14px;
+            border-radius: 14px 14px 14px 4px;
+            border: 1px solid #e2e8f0;
+            align-self: flex-start;
+        }
+        .ai-msg-user {
+            background: #064e3b;
+            color: #ffffff;
+            padding: 10px 14px;
+            border-radius: 14px 14px 4px 14px;
+            align-self: flex-end;
+        }
+        .patty-ai-options {
+            padding: 12px;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .ai-opt-btn {
+            background: #f0fdf4;
+            color: #065f46;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 9px 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+        .ai-opt-btn:hover {
+            background: #dcfce7;
+        }
+        .ai-wa-send {
+            background: #16a34a;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            padding: 11px;
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+
+    <button type="button" class="patty-ai-launcher" id="pattyAiBtn">
+        <span class="patty-ai-dot"></span>
+        Atendimento Comercial
     </button>
+
+    <div class="patty-ai-box" id="pattyAiBox">
+        <div class="patty-ai-header">
+            <div>
+                <strong>Assistente Patty</strong>
+                <small>Online &bull; Resposta imediata</small>
+            </div>
+            <button type="button" class="patty-ai-close" id="pattyAiClose">&times;</button>
+        </div>
+        <div class="patty-ai-messages" id="pattyAiMsgs">
+            <div class="ai-msg-bot">
+                Olá! Quer tornar a sua empresa nossa próxima <strong>parceira industrial ou distribuidora</strong> no RS? Escolha uma opção abaixo:
+            </div>
+        </div>
+        <div class="patty-ai-options" id="pattyAiOpts">
+            <button type="button" class="ai-opt-btn" data-topic="parceria-b2b">Terceirizar minha marca (Private Label)</button>
+            <button type="button" class="ai-opt-btn" data-topic="sigilo">Sigilo industrial e padrão de qualidade</button>
+            <button type="button" class="ai-opt-btn" data-topic="distribuicao">Distribuir a marca Salgadinho Patty</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const btn = document.getElementById('pattyAiBtn');
+        const box = document.getElementById('pattyAiBox');
+        const close = document.getElementById('pattyAiClose');
+        const msgs = document.getElementById('pattyAiMsgs');
+        const opts = document.getElementById('pattyAiOpts');
+        if (!btn || !box) return;
+
+        btn.addEventListener('click', () => box.classList.toggle('open'));
+        close.addEventListener('click', () => box.classList.remove('open'));
+
+        function addMsg(text, isUser) {
+            const div = document.createElement('div');
+            div.className = isUser ? 'ai-msg-user' : 'ai-msg-bot';
+            div.innerHTML = text;
+            msgs.appendChild(div);
+            msgs.scrollTop = msgs.scrollHeight;
+        }
+
+        function openWA(texto) {
+            const base = ['https://', 'api.', 'whatsapp.', 'com/send?phone='].join('');
+            const a = document.createElement('a');
+            a.href = base + '5551996033749&text=' + encodeURIComponent(texto);
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function showInitialOptions() {
+            opts.innerHTML =
+                '<button type="button" class="ai-opt-btn" data-topic="parceria-b2b">Terceirizar minha marca (Private Label)</button>' +
+                '<button type="button" class="ai-opt-btn" data-topic="sigilo">Sigilo industrial e padrão de qualidade</button>' +
+                '<button type="button" class="ai-opt-btn" data-topic="distribuicao">Distribuir a marca Salgadinho Patty</button>';
+        }
+
+        opts.addEventListener('click', function(e) {
+            const topic = e.target.getAttribute('data-topic');
+            if (!topic) return;
+
+            if (topic === 'parceria-b2b') {
+                addMsg('Terceirizar minha marca (Private Label)', true);
+                addMsg('Atendemos grandes operações alimentícias com produção sob medida de <strong>salgadinhos fritos de trigo</strong> em Canoas/RS, cuidando da fritura, tempero e envase.', false);
+                opts.innerHTML =
+                    '<button type="button" class="ai-wa-send" data-topic="wa-b2b">Falar com Engenharia Comercial</button>' +
+                    '<button type="button" class="ai-opt-btn" data-topic="voltar">&larr; Voltar ao início</button>';
+            } else if (topic === 'sigilo') {
+                addMsg('Sigilo industrial e padrão de qualidade', true);
+                addMsg('Operamos sob rigorosas <strong>Boas Práticas de Fabricação (BPF)</strong>, confidencialidade contratual e rastreabilidade de lotes para proteger a reputação da sua marca.', false);
+                opts.innerHTML =
+                    '<button type="button" class="ai-wa-send" data-topic="wa-b2b">Solicitar Reunião Comercial</button>' +
+                    '<button type="button" class="ai-opt-btn" data-topic="voltar">&larr; Voltar ao início</button>';
+            } else if (topic === 'distribuicao') {
+                addMsg('Distribuir a marca Salgadinho Patty', true);
+                addMsg('Oferecemos condições especiais para distribuidores regionais e redes varejistas trabalharem com a linha <strong>Salgadinho Patty (50g e 100g)</strong>.', false);
+                opts.innerHTML =
+                    '<button type="button" class="ai-wa-send" data-topic="wa-revenda">Solicitar Tabela de Distribuição</button>' +
+                    '<button type="button" class="ai-opt-btn" data-topic="voltar">&larr; Voltar ao início</button>';
+            } else if (topic === 'voltar') {
+                showInitialOptions();
+            } else if (topic === 'wa-b2b') {
+                openWA('Olá! Vim pela página de Parceiros do site e gostaria de conversar sobre terceirização industrial.');
+            } else if (topic === 'wa-revenda') {
+                openWA('Olá! Vim pela página de Parceiros do site e tenho interesse em distribuir o Salgadinho Patty.');
+            }
+        });
+    })();
+    </script>
+
+    <!-- ==========================================
+     EFEITO 3D INTERATIVO + SCROLLYTELLING
+========================================== -->
+<style>
+    /* Barra de leitura/progresso fixa no topo da tela */
+    #pattyScrollProgress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background: linear-gradient(90deg, #10b981, #f59e0b);
+        z-index: 10000;
+        transition: width 0.1s ease-out;
+        pointer-events: none;
+    }
+
+    /* Estado inicial dos elementos antes de entrarem na tela */
+    .story-reveal {
+        opacity: 0;
+        transform: translateY(36px) scale(0.97);
+        transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
+    }
+
+    /* Estado ativo quando o usuário rola até a seção */
+    .story-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    /* Efeito 3D nos cards e imagens principais */
+    .patty-3d-card {
+        transition: transform 0.12s ease-out, box-shadow 0.2s ease !important;
+        transform-style: preserve-3d !important;
+        will-change: transform !important;
+        position: relative;
+    }
+    .patty-3d-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.22), transparent 65%);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        z-index: 5;
+    }
+    .patty-3d-card:hover::after {
+        opacity: 1;
+    }
+</style>
+
+<div id="pattyScrollProgress"></div>
+
+<script>
+(function() {
+    // 1. Barra de progresso no topo conforme a rolagem
+    const bar = document.getElementById('pattyScrollProgress');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight > 0 && bar) {
+            bar.style.width = ((scrollTop / docHeight) * 100) + '%';
+        }
+    }, { passive: true });
+
+    // 2. Revelação progressiva em cascata (Scrollytelling)
+    const seletores = [
+        '.section-header',
+        '.path-card',
+        '.step-card',
+        '.flavor-card',
+        '.product-card',
+        '.feature-card',
+        '.benefit-card',
+        '.info-card',
+        '.confidentiality-box',
+        '.cta-banner',
+        '.b2b-banner',
+        '#simulador-ia > .container > div:last-child'
+    ];
+
+    const elementos = document.querySelectorAll(seletores.join(', '));
+    const observer = new IntersectionObserver((entries) => {
+        let delayCounter = 0;
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const delay = delayCounter * 110;
+                delayCounter++;
+                setTimeout(() => {
+                    entry.target.classList.add('is-visible');
+                }, delay);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -35px 0px'
+    });
+
+    elementos.forEach(el => {
+        el.classList.add('story-reveal');
+        observer.observe(el);
+    });
+
+    // 3. Inclinação 3D interativa nos cards e fotos principais
+    const alvos3D = document.querySelectorAll('.path-card, .flavor-card, .product-card, .page-hero-img, .step-card');
+    alvos3D.forEach(el => {
+        if (el.parentElement) {
+            el.parentElement.style.perspective = '900px';
+        }
+        el.classList.add('patty-3d-card');
+
+        el.addEventListener('mousemove', function(e) {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -12;
+            const rotateY = ((x - centerX) / centerX) * 12;
+
+            el.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+            el.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+            el.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+        });
+
+        el.addEventListener('mouseleave', function() {
+            el.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+    });
+})();
+</script>
+
 
 </body>
 </html>
+
