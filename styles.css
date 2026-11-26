@@ -3153,3 +3153,56 @@ header.header .btn-nav {
         object-fit: contain !important;
     }
 }
+
+/* ==========================================
+   DEIXA AS IMAGENS DE TOPO (PATTY E TERCEIRIZAÇÃO) DO MESMO TAMANHO DOS CARDS DA HOME
+========================================== */
+
+.page-hero .container {
+    max-width: 1380px !important;
+}
+
+@media (min-width: 861px) {
+    .page-hero-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.25fr !important;
+        gap: 44px !important;
+        align-items: center !important;
+    }
+}
+
+.page-hero-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.page-hero-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.38) !important;
+}
+
+@media (max-width: 860px) {
+    .page-hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+
+    .page-hero-media,
+    .page-hero-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
