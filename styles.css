@@ -2327,3 +2327,625 @@ button,
     }
 }
 
+/* ==========================================
+   PALETA DE CORES CORPORATIVA MODERNA (INDÚSTRIA B2B)
+========================================== */
+
+body {
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+/* Carrossel com degradês corporativos profundos e elegantes */
+.slide-brand {
+    background: linear-gradient(135deg, #042f2e 0%, #064e3b 55%, #0f172a 100%) !important;
+}
+
+.slide-b2b {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #450a0a 100%) !important;
+}
+
+.slide-partners {
+    background: linear-gradient(135deg, #090d16 0%, #064e3b 65%, #1e293b 100%) !important;
+}
+
+.carousel-tag {
+    background: rgba(245, 158, 11, 0.14) !important;
+    border: 1px solid rgba(245, 158, 11, 0.4) !important;
+    color: #fde68a !important;
+}
+
+/* Seção Hero (Cards principais) com fundo cinza-gelo moderno */
+.hero {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+    color: #0f172a !important;
+}
+
+.hero h1 {
+    color: #0f172a !important;
+}
+
+.hero .hero-subtitle {
+    color: #475569 !important;
+}
+
+.hero .badge {
+    background: #ecfdf5 !important;
+    color: #065f46 !important;
+    border: 1px solid #a7f3d0 !important;
+}
+
+.path-card,
+.step-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05) !important;
+}
+
+.btn-primary {
+    background-color: #065f46 !important;
+    border-color: #065f46 !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #047857 !important;
+}
+
+.btn-secondary {
+    background-color: #0f172a !important;
+    border-color: #0f172a !important;
+    color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+    background-color: #1e293b !important;
+}
+
+.b2b-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    border: 1px solid #334155 !important;
+}
+
+/* ==========================================
+   HARMONIZAÇÃO CORPORATIVA: PATTY, TERCEIRIZAÇÃO E PARCEIROS
+========================================== */
+
+/* Banners de topo das páginas internas (Hero interno) */
+.page-hero,
+.page-header,
+.brand-hero {
+    background: linear-gradient(135deg, #042f2e 0%, #064e3b 55%, #0f172a 100%) !important;
+    color: #ffffff !important;
+}
+
+.b2b-hero,
+.terceirizacao-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #450a0a 100%) !important;
+    color: #ffffff !important;
+}
+
+.page-hero h1,
+.page-header h1,
+.brand-hero h1,
+.b2b-hero h1 {
+    color: #ffffff !important;
+}
+
+.page-hero p,
+.page-header p,
+.brand-hero p,
+.b2b-hero p {
+    color: #cbd5e1 !important;
+}
+
+/* Etiquetas / Badges dentro das páginas internas */
+.section-label.label-brand,
+.flavor-tag {
+    background: #ecfdf5 !important;
+    color: #065f46 !important;
+    border: 1px solid #a7f3d0 !important;
+}
+
+.section-label.label-b2b {
+    background: #fef2f2 !important;
+    color: #991b1b !important;
+    border: 1px solid #fecaca !important;
+}
+
+/* Cards de sabores, benefícios e especificações técnicas */
+.flavor-card,
+.product-card,
+.feature-card,
+.benefit-card,
+.info-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05) !important;
+}
+
+.flavor-card h3,
+.product-card h3,
+.feature-card h3 {
+    color: #0f172a !important;
+}
+
+/* Faixas alternadas de fundo limpo */
+.section-alt,
+.bg-light {
+    background-color: #f8fafc !important;
+}
+
+/* Rodapé corporativo unificado nas 4 páginas */
+.footer {
+    background: #0f172a !important;
+    color: #cbd5e1 !important;
+    border-top: 1px solid #1e293b !important;
+}
+
+.footer strong {
+    color: #ffffff !important;
+}
+
+/* Topo corporativo exclusivo da página Terceirização (.page-hero-b2b) */
+.page-hero.page-hero-b2b {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #450a0a 100%) !important;
+    color: #ffffff !important;
+}
+
+.page-hero.page-hero-b2b h1 {
+    color: #ffffff !important;
+}
+
+.page-hero.page-hero-b2b p {
+    color: #cbd5e1 !important;
+}
+
+.page-hero.page-hero-b2b .badge-b2b {
+    background: rgba(245, 158, 11, 0.14) !important;
+    color: #fde68a !important;
+    border: 1px solid rgba(245, 158, 11, 0.4) !important;
+}
+
+.page-hero.page-hero-b2b .btn-outline-secondary {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.page-hero.page-hero-b2b .btn-outline-secondary:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: #ffffff !important;
+}
+
+/* Topo corporativo exclusivo da página Salgadinho Patty (.page-hero-patty) */
+.page-hero.page-hero-patty {
+    background: linear-gradient(135deg, #042f2e 0%, #064e3b 55%, #0f172a 100%) !important;
+    color: #ffffff !important;
+}
+
+.page-hero.page-hero-patty h1 {
+    color: #ffffff !important;
+}
+
+.page-hero.page-hero-patty p {
+    color: #cbd5e1 !important;
+}
+
+.page-hero.page-hero-patty .badge {
+    background: rgba(245, 158, 11, 0.14) !important;
+    color: #fde68a !important;
+    border: 1px solid rgba(245, 158, 11, 0.4) !important;
+}
+
+.page-hero.page-hero-patty .btn-outline-brand {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.45) !important;
+    background: transparent !important;
+}
+
+.page-hero.page-hero-patty .btn-outline-brand:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: #ffffff !important;
+}
+
+/* Garante que a imagem de topo da Terceirização (e da Patty) apareça inteira sem cortar */
+.page-hero-media {
+    height: auto !important;
+    max-height: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.page-hero-img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 440px !important;
+    object-fit: contain !important;
+    border-radius: 16px !important;
+}
+
+/* Remove qualquer moldura/fundo sobrando atrás da imagem e ajusta o card perfeitamente */
+.page-hero .container {
+    max-width: 1320px !important;
+}
+
+@media (min-width: 861px) {
+    .page-hero-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.15fr !important;
+        gap: 44px !important;
+        align-items: center !important;
+    }
+
+    .page-hero-text h1 {
+        font-size: 2.7rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .page-hero-text p {
+        font-size: 1.1rem !important;
+    }
+}
+
+.page-hero-media {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+}
+
+.page-hero-img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 640px !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* ==========================================
+   AJUSTE RESPONSIVO COMPLETO: CELULARES E TABLETS
+========================================== */
+
+/* 1. Tablets e Telas Médias (até 992px) */
+@media (max-width: 992px) {
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Empilha imagem e texto no topo de Patty e Terceirização */
+    .page-hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 28px !important;
+    }
+
+    .page-hero-text {
+        max-width: 100% !important;
+    }
+
+    .page-hero-text h1 {
+        font-size: 2.1rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .page-hero-actions {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .page-hero-img {
+        max-width: 480px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Ajusta o carrossel principal para altura fluida no tablet */
+    .carousel-slide {
+        padding: 40px 24px !important;
+        min-height: auto !important;
+    }
+
+    .carousel-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 24px !important;
+    }
+
+    .carousel-actions {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+/* 2. Celulares (até 640px) */
+@media (max-width: 640px) {
+    /* Títulos mais proporcionais na tela pequena */
+    .hero h1,
+    .page-hero-text h1,
+    .carousel-slide h1,
+    .carousel-slide h2 {
+        font-size: 1.65rem !important;
+        line-height: 1.22 !important;
+    }
+
+    .hero .hero-subtitle,
+    .page-hero-text p,
+    .carousel-slide p {
+        font-size: 0.98rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Botões ocupam largura confortável e fáceis de tocar com o polegar */
+    .page-hero-actions,
+    .carousel-actions,
+    .hero-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .page-hero-actions .btn,
+    .carousel-actions .btn,
+    .hero-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Trio de mascotes no carrossel ajustado para caber sem cortar */
+    .visual-trio {
+        max-width: 100% !important;
+        gap: 6px !important;
+    }
+
+    .visual-trio img {
+        max-height: 165px !important;
+        width: auto !important;
+    }
+
+    /* Setas do carrossel discretas nas bordas para não cobrir o texto */
+    .carousel-arrow {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 1rem !important;
+    }
+
+    /* Cards da página inicial, sabores e etapas em coluna única */
+    .paths-grid,
+    .steps-grid,
+    .flavors-grid,
+    .products-grid,
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    /* Banner final B2B empilhado */
+    .cta-banner,
+    .b2b-banner {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 28px 20px !important;
+        gap: 18px !important;
+    }
+
+    .cta-banner .btn,
+    .b2b-banner .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Simulador Inteligente no celular */
+    #simulador-ia > .container > div:last-child {
+        padding: 20px 16px !important;
+    }
+
+    /* Assistente Virtual Comercial compacto para não atrapalhar a leitura no celular */
+    .patty-ai-launcher {
+        bottom: 14px !important;
+        right: 14px !important;
+        padding: 11px 16px !important;
+        font-size: 0.88rem !important;
+    }
+
+    .patty-ai-box {
+        bottom: 72px !important;
+        right: 12px !important;
+        left: 12px !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+
+    /* Dá espaço extra no final do rodapé para o botão flutuante não cobrir o texto de copyright */
+    .footer {
+        padding-bottom: 76px !important;
+        text-align: center !important;
+    }
+
+    .footer-content {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+}
+
+/* ==========================================
+   CORREÇÃO DE IMAGENS CORTADAS NO TOPO (CELULAR E TABLET)
+========================================== */
+@media (max-width: 992px) {
+    /* Garante que o primeiro banner/carrossel não fique escondido embaixo do menu fixo */
+    .patty-carousel,
+    .page-hero,
+    .hero {
+        margin-top: 0 !important;
+        padding-top: 28px !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .carousel-slide {
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 32px !important;
+        padding-bottom: 44px !important;
+    }
+
+    /* Libera a altura das caixas de imagem para nunca cortar a cabeça das mascotes nem o topo dos pacotes */
+    .visual-trio,
+    .carousel-visual,
+    .page-hero-media,
+    .path-card-media,
+    .flavor-card-media {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-top: 10px !important;
+    }
+
+    /* Garante que todas as imagens se ajustem proporcionalmente sem cortar nenhuma borda */
+    .visual-trio img,
+    .carousel-visual img,
+    .page-hero-img,
+    .path-card-media img,
+    .flavor-card img {
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 290px !important;
+        object-fit: contain !important;
+    }
+
+       /* No trio de mascotes do carrossel, amplia o tamanho no tablet (641px a 992px) */
+    .visual-trio {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        gap: 0px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-top: 12px !important;
+        overflow: visible !important;
+    }
+
+    .visual-trio img {
+        width: 34% !important;
+        max-width: 240px !important;
+        height: auto !important;
+        max-height: 310px !important;
+        object-fit: contain !important;
+        margin: 0 -6px !important;
+    }
+}
+
+/* Tamanho ampliado exclusivo para Celular (até 640px) */
+@media (max-width: 640px) {
+    .visual-trio img {
+        width: 35% !important;
+        max-width: 155px !important;
+        height: auto !important;
+        max-height: 255px !important;
+        object-fit: contain !important;
+        margin: 0 -8px !important;
+    }
+}
+
+/* ==========================================
+   MENU SUPERIOR 100% VISÍVEL NO CELULAR E TABLET
+========================================== */
+@media (max-width: 900px) {
+    header,
+    .header,
+    .navbar {
+        position: relative !important;
+        width: 100% !important;
+        padding: 12px 10px !important;
+        overflow: visible !important;
+    }
+
+    .navbar .container,
+    .header .container,
+    .nav-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .nav-links,
+    .nav-menu,
+    nav ul,
+    .navbar nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px 10px !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+
+    .nav-links a,
+    .nav-menu a,
+    nav a {
+        font-size: 0.85rem !important;
+        padding: 6px 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Ajusta o botão de destaque "Orçar Produção" para caber inteiro na linha de baixo */
+    .nav-links .btn,
+    .nav-menu .btn,
+    nav .btn,
+    .btn-nav {
+        padding: 8px 16px !important;
+        font-size: 0.86rem !important;
+        margin-top: 2px !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+    }
+}
+
+/* Garante que o cabeçalho e o botão Orçar Produção nunca fiquem cobertos por camadas invisíveis */
+header.header {
+    position: relative !important;
+    z-index: 99999 !important;
+}
+header.header nav.nav,
+header.header nav.nav a,
+header.header nav.nav button,
+header.header .btn-nav {
+    position: relative !important;
+    z-index: 100000 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Garante que a tabela de revenda e seus botões sejam 100% clicáveis */
+#tabela-revenda,
+.table-responsive,
+.revenda-table,
+.btn-table-wa {
+    position: relative !important;
+    z-index: 50 !important;
+    pointer-events: auto !important;
+}
