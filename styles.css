@@ -2951,8 +2951,25 @@ header.header .btn-nav {
 }
 
 /* ==========================================
-   ENCAIXA OS MENUS DENTRO DO ESPAÇO BRANCO DO CABEÇALHO NO CELULAR
+   AJUSTE DEFINITIVO: MENU NO CABEÇALHO E MASCOTES NO PC + CELULAR
 ========================================== */
+
+/* Garante visibilidade absoluta das mascotes no PC e no Celular */
+.carousel-visual,
+.visual-trio,
+.mascote-item,
+.mascote-item img {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.mascote-item {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Regras exclusivas para Celular e Tablet (até 860px) */
 @media (max-width: 860px) {
     header.header {
         position: relative !important;
@@ -3004,12 +3021,7 @@ header.header .btn-nav {
         box-shadow: none !important;
         gap: 6px !important;
     }
-}
 
-/* ==========================================
-   GARANTE QUE AS MASCOTES APAREÇAM NOS BANNERS DO CARROSSEL NO CELULAR
-========================================== */
-@media (max-width: 860px) {
     .patty-carousel {
         height: auto !important;
         min-height: 0 !important;
@@ -3031,11 +3043,7 @@ header.header .btn-nav {
         gap: 20px !important;
     }
 
-    .carousel-visual,
     .visual-trio {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
         flex-wrap: nowrap !important;
@@ -3046,26 +3054,102 @@ header.header .btn-nav {
     }
 
     .visual-trio .mascote-item {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
         width: 34% !important;
         margin: 0 -6px !important;
     }
 
     .visual-trio .mascote-side img {
-        height: 185px !important;
-        max-height: 200px !important;
+        height: 175px !important;
+        max-height: 190px !important;
         width: auto !important;
         max-width: 100% !important;
         object-fit: contain !important;
     }
 
     .visual-trio .mascote-center img {
-        height: 225px !important;
-        max-height: 240px !important;
+        height: 215px !important;
+        max-height: 230px !important;
         width: auto !important;
         max-width: 100% !important;
+        object-fit: contain !important;
+    }
+}
+
+/* ==========================================
+   CORREÇÃO DEFINITIVA DAS MASCOTES (CABEÇALHO + BANNER) NO CELULAR
+========================================== */
+@media (max-width: 860px) {
+    header.header .logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        width: auto !important;
+        gap: 8px !important;
+    }
+
+    header.header .logo-mascote {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: 44px !important;
+        width: auto !important;
+        min-width: 40px !important;
+        flex-shrink: 0 !important;
+        object-fit: contain !important;
+    }
+
+    .carousel-slide.active .carousel-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .carousel-slide.active .carousel-visual {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        flex-shrink: 0 !important;
+        margin-top: 14px !important;
+    }
+
+    .carousel-slide.active .visual-trio {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
+        width: 100% !important;
+        max-width: 420px !important;
+        padding: 8px 0 0 0 !important;
+    }
+
+    .carousel-slide.active .visual-trio .mascote-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        flex: 1 1 33.33% !important;
+        width: 33.33% !important;
+        min-width: 95px !important;
+        margin: 0 -8px !important;
+    }
+
+    .carousel-slide.active .visual-trio .mascote-side img {
+        display: block !important;
+        height: 165px !important;
+        width: auto !important;
+        max-width: 115px !important;
+        object-fit: contain !important;
+    }
+
+    .carousel-slide.active .visual-trio .mascote-center img {
+        display: block !important;
+        height: 205px !important;
+        width: auto !important;
+        max-width: 135px !important;
         object-fit: contain !important;
     }
 }
