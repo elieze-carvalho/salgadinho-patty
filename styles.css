@@ -3155,10 +3155,10 @@ header.header .btn-nav {
 }
 
 /* ==========================================
-   DEIXA AS IMAGENS DE TOPO (PATTY E TERCEIRIZAÇÃO) COM O MESMO PORTE DA HOME
+   LIBERA A PROPORÇÃO NATURAL E O TAMANHO GRANDE NAS PÁGINAS INTERNAS
 ========================================== */
 .page-hero .container {
-    max-width: 1360px !important;
+    max-width: 1380px !important;
 }
 
 @media (min-width: 861px) {
@@ -3175,7 +3175,9 @@ header.header .btn-nav {
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    max-width: 540px !important;
+    max-width: 560px !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
     margin: 0 auto !important;
     padding: 0 !important;
 }
@@ -3183,9 +3185,11 @@ header.header .btn-nav {
 .page-hero-img {
     display: block !important;
     width: 100% !important;
+    max-width: 560px !important;
     height: auto !important;
-    max-height: 640px !important;
-    object-fit: contain !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: cover !important;
     border-radius: 20px !important;
     box-shadow: 0 24px 50px rgba(0, 0, 0, 0.42) !important;
 }
@@ -3197,15 +3201,11 @@ header.header .btn-nav {
         gap: 28px !important;
     }
 
-    .page-hero-media {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
+    .page-hero-media,
     .page-hero-img {
         width: 100% !important;
+        max-width: 100% !important;
         height: auto !important;
-        max-height: 540px !important;
-        object-fit: contain !important;
+        aspect-ratio: auto !important;
     }
 }
